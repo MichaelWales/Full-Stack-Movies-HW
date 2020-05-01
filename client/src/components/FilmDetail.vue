@@ -16,6 +16,8 @@ import FilmsGrid from './FilmsGrid.vue';
 import FilmGridItem from './FilmGridItem.vue';
 
 export default {
+  name: 'film-detail',
+  props: ['film']
 }
 </script>
 

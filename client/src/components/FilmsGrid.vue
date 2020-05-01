@@ -30,7 +30,8 @@ export default {
     })
   },
   components: {
-    'film-grid-item': FilmGridItem
+    'film-grid-item': FilmGridItem,
+    'film-detail': FilmDetail
   }
 }
 </script>
