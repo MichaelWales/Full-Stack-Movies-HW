@@ -6,7 +6,7 @@
 
 <script>
 import {eventBus} from '../main.js';
-import FilmsService from '../services/FilmsService.js';
+import FilmsService from '../services/FilmsServices.js';
 import FilmGridItem from './FilmGridItem';
 
 export default {
