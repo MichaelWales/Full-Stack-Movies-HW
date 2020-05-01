@@ -3,17 +3,17 @@ const app = express();
 const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 const createRouter = require('./helpers/createRouter.js');
-const const cors = require('cors');
+const cors = require('cors');
 
 app.use(cors());
 app.use(bodyParser.json());
 
 MongoClient.connect('mongodb://localhost:27017')
 .then((client) => {
-  const db = client.db('movie_hub');
-  const movieCollection = db.collection('movies');
-  const moviesRouter = createRouter(moviesCollection);
-  app.use('/api/movies', moviesRouter);
+  const db = client.db('film_hub');
+  const filmCollection = db.collection('films');
+  const filmRouter = createRouter(filmCollection);
+  app.use('/api/films', filmRouter);
 })
 .catch(console.error);
 

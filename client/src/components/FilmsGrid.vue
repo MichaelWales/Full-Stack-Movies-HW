@@ -5,7 +5,10 @@
 </template>
 
 <script>
-import FilmGridItem from './FilmGridItem'
+import {eventBus} from '../main.js';
+import FilmsService from '../services/FilmsService.js';
+import FilmGridItem from './FilmGridItem';
+
 export default {
   data(){
     return {
@@ -13,7 +16,13 @@ export default {
     };
   },
   mounted(){
+    FilmsService.getFilms()
+    .then(films => this.films = films)
 
+    eventBus.$on('film-deleted', (id) => {
+      const index = this.films.findIndex(film => film._id === id);
+      this.films.splice(index, 1);
+    })
   },
   components: {
     'film-grid-item': FilmGridItem

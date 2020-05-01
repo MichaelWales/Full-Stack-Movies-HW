@@ -1,7 +1,7 @@
-use movie_hub;
+use film_hub;
 db.dropDatabase();
 
-db.movies.insertMany([
+db.films.insertMany([
   {
     title: "The Room",
     genre: "Romantic Drama",
@@ -46,4 +46,4 @@ db.movies.insertMany([
       producer: "Gloria Katz"
     }
   }
-])
+]);

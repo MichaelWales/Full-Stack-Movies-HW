@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import FilmsGrid from '@/components/FilmsGrid';
-import MovieHeader from '@/components/MovieHeader';
+import FilmsGrid from './components/FilmsGrid.vue';
+import MovieHeader from './components/MovieHeader.vue';
 
 export default {
   name: 'app',
@@ -22,7 +22,7 @@ export default {
 
 body {
   font-family: 'Source Serif Pro', serif;
-  
+
   background-color: #E1E5F2;
   background-position: center;
   width: 100%;
