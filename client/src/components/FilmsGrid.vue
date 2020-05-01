@@ -7,7 +7,8 @@
 <script>
 import {eventBus} from '../main.js';
 import FilmsService from '../services/FilmsServices.js';
-import FilmGridItem from './FilmGridItem';
+import FilmGridItem from './FilmGridItem.vue';
+import FilmDetail from './FilmDetail.vue';
 
 export default {
   data(){
@@ -22,6 +23,10 @@ export default {
     eventBus.$on('film-deleted', (id) => {
       const index = this.films.findIndex(film => film._id === id);
       this.films.splice(index, 1);
+    })
+
+    eventBus.$on('film-selected', (id) => {
+      this.selectFilm = film;
     })
   },
   components: {

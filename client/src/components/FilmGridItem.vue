@@ -12,6 +12,8 @@
 </template>
 
 <script>
+import FilmsService from '../services/FilmsServices.js';
+import {eventBus} from '../main.js';
 
 export default {
   name: 'film-card',
