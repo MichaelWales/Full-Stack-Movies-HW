@@ -18,6 +18,7 @@ import {eventBus} from '../main.js';
 export default {
   name: 'film-card',
   props: ['film'],
+  selectedFilm: {},
   methods: {
     deleteFilm(){
       FilmsService.deleteFilm(this.film._id)

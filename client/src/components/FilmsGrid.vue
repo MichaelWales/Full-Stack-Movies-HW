@@ -13,7 +13,8 @@ import FilmDetail from './FilmDetail.vue';
 export default {
   data(){
     return {
-      films: []
+      films: [],
+      selectedFilm: null
     };
   },
   mounted(){
