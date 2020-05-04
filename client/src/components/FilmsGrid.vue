@@ -1,5 +1,7 @@
 <template lang="html">
   <div class="film-wrapper">
+    <selectedFilm v-if="selectedFilm" :selectedFilm="selectedFilm"></selectedFilm>
+    <br>
     <film-grid-item v-for="(film, index) in films" :key="index" :film="film" />
   </div>
 </template>
@@ -27,7 +29,7 @@ export default {
     })
 
     eventBus.$on('film-selected', (id) => {
-      this.selectFilm = film;
+      this.selectedFilm = film;
     })
   },
   components: {
