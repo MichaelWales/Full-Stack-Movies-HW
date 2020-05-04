@@ -1,8 +1,12 @@
 <template lang="html">
-  <div class="film-wrapper">
-    <selectedFilm v-if="selectedFilm" :selectedFilm="selectedFilm"></selectedFilm>
-    <br>
-    <film-grid-item v-for="(film, index) in films" :key="index" :film="film" />
+  <div>
+    <div class="film-wrapper">
+      <film-detail v-if="selectedFilm" :film="selectedFilm"></film-detail>
+    </div>
+
+    <div class="film-wrapper">
+      <film-grid-item v-for="(film, index) in films" :key="index" :film="film" />
+    </div>
   </div>
 </template>
 

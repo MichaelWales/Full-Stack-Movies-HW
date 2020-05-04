@@ -11,10 +11,5 @@ export default {
       method: 'DELETE'
     })
     .then(res => res.json())
-  },
-
-  selectFilm(id){
-    return fetch(baseUrl + id)
-    .then(res => res.json())
   }
 }

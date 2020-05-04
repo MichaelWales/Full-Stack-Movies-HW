@@ -24,8 +24,7 @@ export default {
       .then(() => eventBus.$emit('film-deleted', this.film._id))
     },
     selectFilm() {
-      FilmsService.selectFilm(this.film._id)
-      .then(() => eventBus.$emit('film-selected', this.film._id))
+      eventBus.$emit('film-selected', this.film._id)
     }
   }
 }
